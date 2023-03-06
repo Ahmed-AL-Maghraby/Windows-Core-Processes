@@ -7,7 +7,19 @@ Core Windows Processes Under develop
 + tasklist ( CLI )
 + Get-Process ( CLI )
 + ps  ( CLI )
-
+-----------------------------------------
+###  System process :
+special kind of process that hosts threads that only run in kernel mode.
+| Process Name  | System |
+| ------------- | ------------- |
+| PID | 4 |
+| Parent Process | None |
+|  Child Processes | smss.exe |
+| Image Path  | C:\Windows\system32\ntoskrnl.exe |
+| Start Time | At boot time |
+| User | NT AUTHORITY\SYSTEM |
+| unusual behaviour  | test <br> test2 |
+-----------------------------------------
 
 | Process Name  | System |
 | ------------- | ------------- |
@@ -31,17 +43,6 @@ Core Windows Processes Under develop
 | unusual behaviour  | test <br> test2 |
 
 
-| Process Name  | System |
-| ------------- | ------------- |
-| PID | 4 |
-| Parent Process | None |
-|  Child Processes | smss.exe |
-| Image Path  | C:\Windows\system32\ntoskrnl.exe |
-| Start Time | At boot time |
-| User | NT AUTHORITY\SYSTEM |
-| unusual behaviour  | test <br> test2 |
-
-----------------------------------------------------
 
 | Process Name  | System |
 | ------------- | ------------- |
