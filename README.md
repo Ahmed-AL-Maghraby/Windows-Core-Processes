@@ -36,7 +36,7 @@ special kind of process that hosts threads that only run only in kernel-mode exe
 | ------------- | ------------- |
 | PID | Random |
 | Parent Process | System |
-| Child Processes | SMSS.EXE (Session 0) for OS <br> SMSS.EXE (Session 1) for User <br> AUTOCHK.EXE and a new SMSS.EXE instance for each new session |
+| Child Processes | SMSS.EXE (Session 0) for OS <br> SMSS.EXE (Session 1) for User <br> csrss.exe |
 | Image Path  |C:\Windows\System32\smss.exe |
 | Start Time | Within seconds of boot time for the master instance |
 | User | NT AUTHORITY\SYSTEM |
@@ -46,40 +46,63 @@ special kind of process that hosts threads that only run only in kernel-mode exe
   
   
   ### csrss process :
-  +
-  +
-  +
-  +
-  +
+  + Client Server Runtime Process
+  + Always running and is critical to system operation
+  + Responsible for the Win32 console window and process thread creation and deletion
+  + Responsible for making the Windows API available to other processes
+  + Mapping drive letters
+  + Handling the Windows shutdown process
+  + For each instance, csrsrv.dll, basesrv.dll, and winsrv.dll are loaded 
   
   
   
 
-| Process Name  | System |
+| Process Name  | Csrss |
 | ------------- | ------------- |
 | PID | 4 |
-| Parent Process | None |
-|  Child Processes | smss.exe |
-| Image Path  | C:\Windows\system32\ntoskrnl.exe |
-| Start Time | At boot time |
+| Parent Process | smss.exe |
+|  Child Processes | None |
+| Image Path  | C:\Windows\system32\csrss.exe |
+| Start Time | Within seconds of boot time for the first two instances  |
 | User | NT AUTHORITY\SYSTEM |
-| Number of Instances | 1 |
+| Number of Instances |  Two or more |
+| unusual behaviour  | Different parent process <br> - Different image path <br> - Different runing user |
+------------------------------------------
+
+ ### Wininit process : 
+  
+
+
+| Process Name  | Csrss |
+| ------------- | ------------- |
+| PID | 4 |
+| Parent Process | smss.exe |
+|  Child Processes | None |
+| Image Path  | C:\Windows\system32\csrss.exe |
+| Start Time | Within seconds of boot time for the first two instances  |
+| User | NT AUTHORITY\SYSTEM |
+| Number of Instances |  Two or more |
+| unusual behaviour  | test <br> test2 |
+------------------------------------------
+
+
+
+
+| Process Name  | Csrss |
+| ------------- | ------------- |
+| PID | 4 |
+| Parent Process | smss.exe |
+|  Child Processes | None |
+| Image Path  | C:\Windows\system32\csrss.exe |
+| Start Time | Within seconds of boot time for the first two instances  |
+| User | NT AUTHORITY\SYSTEM |
+| Number of Instances |  Two or more |
 | unusual behaviour  | test <br> test2 |
 
 
 
 
-  
-
-
-
-
-
-
-
-
-
-<br>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br ><br> <br>
 System
 System > smss.exe
 csrss.exe
