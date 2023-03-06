@@ -69,21 +69,39 @@ special kind of process that hosts threads that only run only in kernel-mode exe
 | unusual behaviour  | Different parent process <br> - Different image path <br> - Different runing user |
 ------------------------------------------
 
- ### Wininit process : 
-  
+
+### Wininit process : 
+
++ Windows Initialization Process
++ Responsible for launching : 
+ - services.exe (Service Control Manager)
+ - lsass.exe (Local Security Authority)
+ - and lsaiso.exe
++ Sets the LSA encryption key
++ It's critical Windows process and runs in the background
 
 
-| Process Name  | Csrss |
+
+| Process Name  | Winint |
 | ------------- | ------------- |
-| PID | 4 |
+| PID | Random |
 | Parent Process | smss.exe |
-|  Child Processes | None |
-| Image Path  | C:\Windows\system32\csrss.exe |
-| Start Time | Within seconds of boot time for the first two instances  |
+|  Child Processes | services.exe <br> lsass.exe <br> lsaiso.exe <br> fontdrvhost.exe |
+| Image Path  | C:\Windows\system32\wininit.exe |
+| Start Time | W Within seconds of boot time  |
 | User | NT AUTHORITY\SYSTEM |
-| Number of Instances |  Two or more |
+| Number of Instances |  1 |
 | unusual behaviour  | test <br> test2 |
 ------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
