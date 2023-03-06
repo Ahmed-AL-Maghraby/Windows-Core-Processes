@@ -41,7 +41,7 @@ special kind of process that hosts threads that only run only in kernel-mode exe
 | Start Time | Within seconds of boot time for the master instance |
 | User | NT AUTHORITY\SYSTEM |
 | Number of Instances | One master instance and child instance per session <br> The child instance exits after creating the session. |
-| Unusual behaviour  | Different parent process <br> - Different image path <br> - Different runing user <br> - Unexpected registry entries for Subsystem <br> - More than one running process  |
+| Unusual behaviour  | - Different parent process <br> - Different image path <br> - Different runing user <br> - Unexpected registry entries for Subsystem <br> - More than one running process  |
 -----------------------------------------
   
   
@@ -66,7 +66,7 @@ special kind of process that hosts threads that only run only in kernel-mode exe
 | Start Time | Within seconds of boot time for the first two instances  |
 | User | NT AUTHORITY\SYSTEM |
 | Number of Instances |  Two or more |
-| unusual behaviour  | Different parent process <br> - Different image path <br> - Different runing user |
+| unusual behaviour  | - Different parent process <br> - Different image path <br> - Different runing user |
 ------------------------------------------
 
 
@@ -91,7 +91,7 @@ special kind of process that hosts threads that only run only in kernel-mode exe
 | Start Time | W Within seconds of boot time  |
 | User | NT AUTHORITY\SYSTEM |
 | Number of Instances |  1 |
-| unusual behaviour  | Different parent process <br> - Different image path <br> - Different runing user <br> Multiple running instances|
+| unusual behaviour  | - Different parent process <br> - Different image path <br> - Different runing user <br> - Multiple running instances|
 ------------------------------------------
 
 
